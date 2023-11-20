@@ -1,0 +1,8 @@
+# > 菜鸟裹裹_通用广告请求@ddgksf2013
+URL-REGEX,^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/
+# > 菜鸟裹裹_支付宝小程序_通用广告请求@ddgksf2013
+URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show
+# > 菜鸟裹裹_支付宝小程序_底部商品推广@ddgksf2013
+URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad
+# > 菜鸟裹裹_支付宝小程序_匿名选择@ddgksf2013
+URL-REGEX,^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge
