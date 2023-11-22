@@ -1,0 +1,33 @@
+
+[Rule]
+# > 屏蔽应用内弹窗
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp,REJECT
+# > 屏蔽部分启动弹窗
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide,REJECT
+# > 屏蔽开屏广告请求
+URL-REGEX,^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad,REJECT
+# > 屏蔽青少年弹窗
+URL-REGEX,^https?:\/\/api.gotokeep.com/cauchy/growth/init,REJECT
+# > 屏蔽搜索栏自动填充词
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/search\/v\d\/default\/keyword\/list,REJECT
+# > 屏蔽热词
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotword\/list,REJECT
+# > 屏蔽hotCourse
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/search\/v\d\/hotCourse\/list,REJECT
+# > 屏蔽adwebapp
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/op-engine-webapp\/v\d\/ad,REJECT
+# > 屏蔽广告预加载
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/ads\/v\d\/ads\/preload,REJECT
+# > 屏蔽adbox
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/training\/box\/config,REJECT
+# > 屏蔽更新
+URL-REGEX,^https?:\/\/api\.gotokeep\.com\/anno\/v\d\/upgrade\/check,REJECT
+
+
+
+[Script]
+http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js, requires-body=true, timeout=10,tag=我的页面去推广
+http-response ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js, requires-body=true, timeout=10,tag=应用底部栏净化
+http-response https://api.gotokeep.com/homepage/v\d/tab script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js, requires-body=true, timeout=10,tag=发现页处理
+http-response https://api.gotokeep.com/nuocha/course/v2/\w+/preview script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js, requires-body=true, timeout=10,tag=课程预览页广告
+http-response https://api.gotokeep.com/sportpage/sport/v3/mysport url script-response-body script-path=https://github.com/ddgksf2013/Scripts/raw/master/keepStyle.js, requires-body=true, timeout=10,tag=我的运动页面去除下方推荐
